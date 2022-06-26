@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_personalInformation">
+
+    <fragment
+        android:id="@+id/nav_personalInformation"
+        android:name="com.iman.databaseproj.ui.home.UserInformationFragment"
+        android:label="@string/menu_personalInformation"
+        tools:layout="@layout/fragment_user_information" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_newOrder"
+        android:name="com.iman.databaseproj.ui.gallery.GalleryFragment"
+        android:label="@string/menu_newOrder"
+        tools:layout="@layout/fragment_gallery" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.iman.databaseproj.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_history"
+        tools:layout="@layout/fragment_slideshow" >
+    </fragment>
+</navigation>

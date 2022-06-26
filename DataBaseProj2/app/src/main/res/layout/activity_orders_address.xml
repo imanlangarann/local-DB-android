@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtdt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date : "
+            android:textSize="24sp"
+            android:layout_marginTop="40dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layyear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txtdt"
+            app:layout_constraintBottom_toBottomOf="@id/txtdt"
+            app:layout_constraintLeft_toRightOf="@id/txtdt"
+            app:layout_constraintRight_toLeftOf="@id/laymonth">
+
+            <TextView
+                android:id="@+id/date_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1399"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:minWidth="50dp"
+                android:textAlignment="center"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_up_year"
+                app:layout_constraintBottom_toTopOf="@id/btn_down_year"/>
+
+            <ImageView
+                android:id="@+id/btn_up_year"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow"
+                app:tint="@android:color/black"
+                android:layout_marginBottom="0.5dp"
+                android:background="@drawable/btn_up_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/btn_down_year"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow"
+                android:rotation="180"
+                android:background="@drawable/btn_up_bg"
+                android:layout_marginTop="1dp"
+                app:tint="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/laymonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txtdt"
+            app:layout_constraintBottom_toBottomOf="@id/txtdt"
+            app:layout_constraintLeft_toRightOf="@id/layyear"
+            app:layout_constraintRight_toLeftOf="@id/layday">
+
+            <TextView
+                android:id="@+id/date_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:minWidth="50dp"
+                android:textAlignment="center"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_up_month"
+                app:layout_constraintBottom_toTopOf="@id/btn_down_month"/>
+
+            <ImageView
+                android:id="@+id/btn_up_month"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow"
+                app:tint="@android:color/black"
+                android:layout_marginBottom="0.5dp"
+                android:background="@drawable/btn_up_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/btn_down_month"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow"
+                android:rotation="180"
+                android:background="@drawable/btn_up_bg"
+                android:layout_marginTop="1dp"
+                app:tint="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txtdt"
+            app:layout_constraintBottom_toBottomOf="@id/txtdt"
+            app:layout_constraintLeft_toRightOf="@id/laymonth"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/date_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:minWidth="50dp"
+                android:textAlignment="center"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_up_day"
+                app:layout_constraintBottom_toTopOf="@id/btn_down_day"/>
+
+            <ImageView
+                android:id="@+id/btn_up_day"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow"
+                app:tint="@android:color/black"
+                android:layout_marginBottom="0.5dp"
+                android:background="@drawable/btn_up_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/btn_down_day"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow"
+                android:rotation="180"
+                android:background="@drawable/btn_up_bg"
+                android:layout_marginTop="1dp"
+                app:tint="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/tvaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address : "
+            app:layout_constraintTop_toBottomOf="@id/txtdt"
+            android:layout_marginTop="60dp"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            />
+
+        <EditText
+            android:id="@+id/input_address"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvaddress"
+            android:hint="address"
+            android:lines="5"
+            android:maxLines="5"
+            android:gravity="top"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/input_address_bg"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

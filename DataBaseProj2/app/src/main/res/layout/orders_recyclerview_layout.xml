@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/rootOrdersRecyclerView" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="#eeeeee"
+    >
+
+    <View
+        android:id="@+id/red_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF4141"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center">
+
+
+
+
+
+        <TextView
+            android:id="@+id/ordersRecyclerViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ordersRecyclerViewCost"
+            android:text="title 1"
+            android:layout_marginLeft="6dp"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/ordersRecyclerViewCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ordersRecyclerViewTitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/ordersRecyclerViewTitle"
+            android:layout_marginTop="2dp"
+            android:text="Cost : 2500"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"/>
+
+
+        <ImageView
+            android:id="@+id/ordersRecyclerViewDelete"
+            android:layout_width="40dp"
+            android:layout_height="70dp"
+            android:padding="6dp"
+            android:src="@drawable/ic_delete"
+            app:tint="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.7">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layhs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/layns"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:id="@+id/hs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/ordersRecyclerViewHours"
+                    android:text="hours : "
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/ordersRecyclerViewHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp"
+                    android:minWidth="24dp"
+                    android:textAlignment="center"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/hs"
+                    app:layout_constraintTop_toTopOf="@id/hs"
+                    app:layout_constraintBottom_toBottomOf="@id/hs"/>
+
+                <ImageView
+                    android:id="@+id/btn_up_hours"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_arrow"
+                    app:tint="@android:color/black"
+                    android:background="@drawable/btn_up_bg"
+                    app:layout_constraintBottom_toTopOf="@id/hs"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/btn_down_hours"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_arrow"
+                    android:rotation="180"
+                    android:background="@drawable/btn_up_bg"
+                    app:tint="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/hs"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/layhs"
+            app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginRight="15dp">
+
+            <TextView
+                android:id="@+id/ns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/ordersRecyclerViewNumbers"
+                android:text="cleaners : "
+                android:layout_marginBottom="2dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ordersRecyclerViewNumbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:minWidth="24dp"
+                android:textAlignment="center"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ns"
+                app:layout_constraintTop_toTopOf="@id/ns"
+                app:layout_constraintBottom_toBottomOf="@id/ns"/>
+
+            <ImageView
+                android:id="@+id/btn_up_numbers"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow"
+                app:tint="@android:color/black"
+                android:layout_marginBottom="0.5dp"
+                android:background="@drawable/btn_up_bg"
+                app:layout_constraintBottom_toTopOf="@id/ns"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/btn_down_numbers"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow"
+                android:rotation="180"
+                android:background="@drawable/btn_up_bg"
+                android:layout_marginTop="1dp"
+                app:tint="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/ns"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
